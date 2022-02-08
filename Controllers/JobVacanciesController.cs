@@ -55,7 +55,7 @@ namespace DevJobs.API.Controllers
 
         // POST api/job-vacancies
         /// <summary>
-        /// Cadastrar uma vaga de emprego
+        /// Cadastro da Vaga
         /// </summary>
         /// <remarks>
         /// Requisição:

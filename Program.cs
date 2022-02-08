@@ -29,9 +29,9 @@ builder.Services.AddSwaggerGen(c =>
         Version = "v1",
         Contact = new OpenApiContact
         {
-            Name = "LuisDev",
-            Email = "contato@luisdev.com.br",
-            Url = new Uri("https://luisdev.com.br")
+            Name = "Samuel B. Oldra",
+            Email = "samuel.oldra@gmail.com",
+            Url = new Uri("https://github.com/samuel-oldra")
         }
     });
 
