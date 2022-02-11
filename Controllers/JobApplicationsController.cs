@@ -2,6 +2,7 @@ using DevJobs.API.Entities;
 using DevJobs.API.Models;
 using DevJobs.API.Persistence;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace DevJobs.API.Controllers
 {
@@ -16,7 +17,7 @@ namespace DevJobs.API.Controllers
             _context = context;
         }
 
-        // POST api/job-vacancies/{id}/applications
+        // POST: api/job-vacancies/{id}/applications
         /// <summary>
         /// Listagem de Candidatos
         /// </summary>
@@ -27,11 +28,11 @@ namespace DevJobs.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult Post(int id, AddJobApplicationInputModel model)
         {
-            var jobVacancy = _context.JobVacancies
-                .SingleOrDefault(jv => jv.Id == id);
+            Log.Information("Endpoint - POST: api/job-vacancies/{id}/applications");
 
-            if (jobVacancy == null)
-                return NotFound();
+            var jobVacancy = _context.JobVacancies.SingleOrDefault(jv => jv.Id == id);
+
+            if (jobVacancy == null) return NotFound();
 
             var application = new JobApplication(
                 model.ApplicantName,

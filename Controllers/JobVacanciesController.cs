@@ -17,7 +17,7 @@ namespace DevJobs.API.Controllers
             _repository = repository;
         }
 
-        // GET api/job-vacancies
+        // GET: api/job-vacancies
         /// <summary>
         /// Listagem de Vagas
         /// </summary>
@@ -27,12 +27,14 @@ namespace DevJobs.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetAll()
         {
+            Log.Information("Endpoint - GET: api/job-vacancies");
+
             var jobVacancies = _repository.GetAll();
 
             return Ok(jobVacancies);
         }
 
-        // GET api/job-vacancies/{id}
+        // GET: api/job-vacancies/{id}
         /// <summary>
         /// Detalhes da Vaga
         /// </summary>
@@ -45,15 +47,16 @@ namespace DevJobs.API.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetById(int id)
         {
+            Log.Information("Endpoint - GET: api/job-vacancies/{id}");
+
             var jobVacancy = _repository.GetById(id);
 
-            if (jobVacancy == null)
-                return NotFound();
+            if (jobVacancy == null) return NotFound();
 
             return Ok(jobVacancy);
         }
 
-        // POST api/job-vacancies
+        // POST: api/job-vacancies
         /// <summary>
         /// Cadastro da Vaga
         /// </summary>
@@ -76,7 +79,7 @@ namespace DevJobs.API.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Post(AddJobVacancyInputModel model)
         {
-            Log.Information("Post executado.");
+            Log.Information("Endpoint - POST: api/job-vacancies");
 
             var jobVacancy = new JobVacancy(
                 model.Title,
@@ -94,7 +97,7 @@ namespace DevJobs.API.Controllers
                 jobVacancy);
         }
 
-        // PUT api/job-vacancies/{id}
+        // PUT: api/job-vacancies/{id}
         /// <summary>
         /// Atualiza uma Vaga
         /// </summary>
@@ -117,10 +120,11 @@ namespace DevJobs.API.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Put(int id, UpdateJobVacancyInputModel model)
         {
+            Log.Information("Endpoint - PUT: api/job-vacancies/{id}");
+
             var jobVacancy = _repository.GetById(id);
 
-            if (jobVacancy == null)
-                return NotFound();
+            if (jobVacancy == null) return NotFound();
 
             jobVacancy.Update(model.Title, model.Description);
 
