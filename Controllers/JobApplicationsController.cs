@@ -22,6 +22,7 @@ namespace DevJobs.API.Controllers
         /// Listagem de Candidatos
         /// </summary>
         /// <param name="id">ID da Vaga</param>
+        /// <param name="model">Dados do Candidato</param>
         /// <returns>Lista de Candidatos</returns>
         /// <response code="200">Sucesso</response>
         [HttpPost]

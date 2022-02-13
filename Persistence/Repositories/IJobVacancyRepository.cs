@@ -6,7 +6,7 @@ namespace DevJobs.API.Persistence.Repositories
     {
         List<JobVacancy> GetAll();
 
-        JobVacancy GetById(int id);
+        JobVacancy? GetById(int id);
 
         void Add(JobVacancy jobVacancy);
 

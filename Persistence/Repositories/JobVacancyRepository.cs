@@ -29,7 +29,7 @@ namespace DevJobs.API.Persistence.Repositories
             return _context.JobVacancies.ToList();
         }
 
-        public JobVacancy GetById(int id)
+        public JobVacancy? GetById(int id)
         {
             return _context.JobVacancies
                 .Include(jv => jv.Applications)

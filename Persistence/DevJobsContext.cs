@@ -5,9 +5,13 @@ namespace DevJobs.API.Persistence
 {
     public class DevJobsContext : DbContext
     {
+#pragma warning disable CS8618
+
         public DevJobsContext(DbContextOptions<DevJobsContext> context) : base(context)
         {
         }
+
+#pragma warning restore CS8618
 
         public DbSet<JobVacancy> JobVacancies { get; set; }
         public DbSet<JobApplication> JobApplications { get; set; }

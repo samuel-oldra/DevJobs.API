@@ -1,17 +1,19 @@
-# DevJobs - Jornada .NET Direto ao Ponto
+# Projeto de API usando C# e .NET 6
+
+## DevJobs - Jornada .NET Direto ao Ponto
 
 Foi desenvolvida uma API REST completa de gerenciamento de vagas de emprego e aplicação de vagas.
 
 ## Tecnologias e práticas utilizadas
 - ASP.NET Core com .NET 6
 - Entity Framework Core
-- SQL Server
+- SQL Server / In-Memory database
 - Swagger
 - Injeção de Dependência
 - Programação Orientada a Objetos
 - Padrão Repository
 - Logs com Serilog
-- Publicação na nuvem com Azure App Service
+- Publicação
 
 ## Funcionalidades
 - Cadastro, Listagem, Detalhes, Atualização de Vaga de Emprego
@@ -21,11 +23,13 @@ Foi desenvolvida uma API REST completa de gerenciamento de vagas de emprego e ap
 
 ![alt text](https://raw.githubusercontent.com/samuel-oldra/DevJobs.API/master/README_IMGS/swagger_ui.png)
 
-## Comandos básicos:
+## Comandos básicos
 ```
 dotnet new webapi -o DevJobs.API
 dotnet build
 dotnet run
+dotnet watch run
+dotnet publish
 ```
 
 ## Comandos user-secrets
