@@ -7,9 +7,7 @@ namespace DevJobs.API.Persistence
     {
 #pragma warning disable CS8618
 
-        public DevJobsContext(DbContextOptions<DevJobsContext> context) : base(context)
-        {
-        }
+        public DevJobsContext(DbContextOptions<DevJobsContext> context) : base(context) { }
 
 #pragma warning restore CS8618
 

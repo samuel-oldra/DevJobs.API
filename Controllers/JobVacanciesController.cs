@@ -12,10 +12,7 @@ namespace DevJobs.API.Controllers
     {
         private readonly IJobVacancyRepository _repository;
 
-        public JobVacanciesController(IJobVacancyRepository repository)
-        {
-            _repository = repository;
-        }
+        public JobVacanciesController(IJobVacancyRepository repository) => _repository = repository;
 
         // GET: api/job-vacancies
         /// <summary>
@@ -94,7 +91,8 @@ namespace DevJobs.API.Controllers
             return CreatedAtAction(
                 "GetById",
                 new { id = jobVacancy.Id },
-                jobVacancy);
+                jobVacancy
+            );
         }
 
         // PUT: api/job-vacancies/{id}
