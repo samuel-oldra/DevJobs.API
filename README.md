@@ -13,6 +13,7 @@ Foi desenvolvida uma API REST completa de gerenciamento de vagas de emprego e ap
 - Programação Orientada a Objetos
 - Padrão Repository
 - Logs com Serilog
+- Clean Code
 - Publicação
 
 ## Funcionalidades

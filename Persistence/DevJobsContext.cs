@@ -12,6 +12,7 @@ namespace DevJobs.API.Persistence
 #pragma warning restore CS8618
 
         public DbSet<JobVacancy> JobVacancies { get; set; }
+
         public DbSet<JobApplication> JobApplications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

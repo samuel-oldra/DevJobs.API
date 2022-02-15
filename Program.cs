@@ -8,14 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-var connectionString = builder.Configuration.GetConnectionString("DevJobsCs");
+// var connectionString = builder.Configuration.GetConnectionString("DevJobsCs");
+// builder.Services.AddDbContext<DevJobsContext>(options => options.UseSqlServer(connectionString));
 
-// builder.Services
-//     .AddDbContext<DevJobsContext>(options =>
-//         options.UseSqlServer(connectionString ));
-builder.Services
-    .AddDbContext<DevJobsContext>(options =>
-        options.UseInMemoryDatabase("DevJobs"));
+builder.Services.AddDbContext<DevJobsContext>(options => options.UseInMemoryDatabase("DevJobs"));
 
 builder.Services.AddScoped<IJobVacancyRepository, JobVacancyRepository>();
 

@@ -36,7 +36,7 @@ namespace DevJobs.API.Controllers
         /// Detalhes da Vaga
         /// </summary>
         /// <param name="id">ID da Vaga</param>
-        /// <returns>Mostra uma vaga</returns>
+        /// <returns>Mostra uma Vaga</returns>
         /// <response code="200">Sucesso</response>
         /// <response code="404">Não encontrado</response>
         [HttpGet("{id}")]
