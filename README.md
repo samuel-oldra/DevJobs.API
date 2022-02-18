@@ -26,6 +26,7 @@ Foi desenvolvida uma API REST completa de gerenciamento de vagas de emprego e ap
 
 ## Comandos básicos
 ```
+dotnet new gitignore
 dotnet new webapi -o DevJobs.API
 dotnet build
 dotnet run
