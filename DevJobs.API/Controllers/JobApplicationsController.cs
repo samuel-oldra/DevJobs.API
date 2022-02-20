@@ -12,7 +12,8 @@ namespace DevJobs.API.Controllers
     {
         private readonly DevJobsContext _context;
 
-        public JobApplicationsController(DevJobsContext context) => _context = context;
+        public JobApplicationsController(DevJobsContext context) =>
+            _context = context;
 
         // POST: api/job-vacancies/{id}/applications
         /// <summary>
@@ -30,13 +31,10 @@ namespace DevJobs.API.Controllers
 
             var jobVacancy = _context.JobVacancies.SingleOrDefault(jv => jv.Id == id);
 
-            if (jobVacancy == null) return NotFound();
+            if (jobVacancy == null)
+                return NotFound();
 
-            var application = new JobApplication(
-                model.ApplicantName,
-                model.ApplicantEmail,
-                id
-            );
+            var application = new JobApplication(model.ApplicantName, model.ApplicantEmail, id);
 
             _context.JobApplications.Add(application);
             _context.SaveChanges();

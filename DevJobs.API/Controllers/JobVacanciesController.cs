@@ -12,7 +12,8 @@ namespace DevJobs.API.Controllers
     {
         private readonly IJobVacancyRepository _repository;
 
-        public JobVacanciesController(IJobVacancyRepository repository) => _repository = repository;
+        public JobVacanciesController(IJobVacancyRepository repository) =>
+            _repository = repository;
 
         // GET: api/job-vacancies
         /// <summary>
@@ -48,7 +49,8 @@ namespace DevJobs.API.Controllers
 
             var jobVacancy = _repository.GetById(id);
 
-            if (jobVacancy == null) return NotFound();
+            if (jobVacancy == null)
+                return NotFound();
 
             return Ok(jobVacancy);
         }
@@ -83,16 +85,11 @@ namespace DevJobs.API.Controllers
                 model.Description,
                 model.Company,
                 model.IsRemote,
-                model.SalaryRange
-            );
+                model.SalaryRange);
 
             _repository.Add(jobVacancy);
 
-            return CreatedAtAction(
-                "GetById",
-                new { id = jobVacancy.Id },
-                jobVacancy
-            );
+            return CreatedAtAction("GetById", new { id = jobVacancy.Id }, jobVacancy);
         }
 
         // PUT: api/job-vacancies/{id}
@@ -122,7 +119,8 @@ namespace DevJobs.API.Controllers
 
             var jobVacancy = _repository.GetById(id);
 
-            if (jobVacancy == null) return NotFound();
+            if (jobVacancy == null)
+                return NotFound();
 
             jobVacancy.Update(model.Title, model.Description);
 

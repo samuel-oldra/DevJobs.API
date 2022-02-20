@@ -7,7 +7,8 @@ namespace DevJobs.API.Persistence.Repositories
     {
         private readonly DevJobsContext _context;
 
-        public JobVacancyRepository(DevJobsContext context) => _context = context;
+        public JobVacancyRepository(DevJobsContext context) =>
+            _context = context;
 
         public List<JobVacancy> GetAll() =>
             _context.JobVacancies.ToList();

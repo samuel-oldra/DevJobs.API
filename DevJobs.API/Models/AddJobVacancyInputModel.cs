@@ -5,6 +5,5 @@ namespace DevJobs.API.Models
         string Description,
         string Company,
         bool IsRemote,
-        string SalaryRange
-    );
+        string SalaryRange);
 }
