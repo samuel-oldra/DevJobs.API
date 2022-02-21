@@ -17,14 +17,25 @@ namespace DevJobs.API.Controllers
 
         // POST: api/job-vacancies/{id}/applications
         /// <summary>
-        /// Listagem de Candidatos
+        /// Cadastro do Candidato
         /// </summary>
+        /// <remarks>
+        /// Requisição:
+        /// {
+        ///     "applicantName": "Samuel",
+        ///     "applicantEmail": "samuel@teste",
+        ///     "idJobVacancy": 1
+        /// }
+        /// </remarks>
         /// <param name="id">ID da Vaga</param>
         /// <param name="model">Dados do Candidato</param>
-        /// <returns>Lista de Candidatos</returns>
-        /// <response code="200">Sucesso</response>
+        /// <response code="204">Sucesso</response>
+        /// <response code="400">Dados inválidos</response>
+        /// <response code="404">Não encontrado</response>
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Post(int id, AddJobApplicationInputModel model)
         {
             Log.Information("Endpoint - POST: api/job-vacancies/{id}/applications");

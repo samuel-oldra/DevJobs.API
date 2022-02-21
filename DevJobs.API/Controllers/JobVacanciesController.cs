@@ -72,7 +72,7 @@ namespace DevJobs.API.Controllers
         /// <param name="model">Dados de Vaga</param>
         /// <returns>Objeto criado</returns>
         /// <response code="201">Sucesso</response>
-        /// <response code="400">Dados inválidos.</response>
+        /// <response code="400">Dados inválidos</response>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -105,7 +105,6 @@ namespace DevJobs.API.Controllers
         /// </remarks>
         /// <param name="id">ID da Vaga</param>
         /// <param name="model">Dados da Vaga</param>
-        /// <returns>Objeto atualizado</returns>
         /// <response code="204">Sucesso</response>
         /// <response code="400">Dados inválidos</response>
         /// <response code="404">Não encontrado</response>
