@@ -5,27 +5,27 @@ namespace DevJobs.API.Persistence
 {
     public class DevJobsContext : DbContext
     {
-        public DevJobsContext(DbContextOptions<DevJobsContext> options) : base(options) { }
-
         public DbSet<JobVacancy> JobVacancies { get; set; }
 
         public DbSet<JobApplication> JobApplications { get; set; }
 
+        public DevJobsContext(DbContextOptions<DevJobsContext> options) : base(options) { }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<JobVacancy>(e =>
+            modelBuilder.Entity<JobVacancy>(jv =>
             {
-                e.HasKey(jv => jv.Id);
+                jv.HasKey(jv => jv.Id);
 
-                e.HasMany(jv => jv.Applications)
+                jv.HasMany(jv => jv.Applications)
                     .WithOne()
                     .HasForeignKey(ja => ja.IdJobVacancy)
                     .OnDelete(DeleteBehavior.Restrict);
             });
 
-            modelBuilder.Entity<JobApplication>(e =>
+            modelBuilder.Entity<JobApplication>(ja =>
             {
-                e.HasKey(ja => ja.Id);
+                ja.HasKey(ja => ja.Id);
             });
         }
     }
