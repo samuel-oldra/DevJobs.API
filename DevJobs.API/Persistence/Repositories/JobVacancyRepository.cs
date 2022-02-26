@@ -7,14 +7,14 @@ namespace DevJobs.API.Persistence.Repositories
     {
         private readonly DevJobsContext _context;
 
-        public JobVacancyRepository(DevJobsContext context) =>
-            _context = context;
+        public JobVacancyRepository(DevJobsContext context)
+            => _context = context;
 
-        public List<JobVacancy> GetAll() =>
-            _context.JobVacancies.ToList();
+        public List<JobVacancy> GetAll()
+            => _context.JobVacancies.ToList();
 
-        public JobVacancy? GetById(int id) =>
-            _context.JobVacancies.Include(jv => jv.Applications).SingleOrDefault(jv => jv.Id == id);
+        public JobVacancy? GetById(int id)
+            => _context.JobVacancies.Include(jv => jv.Applications).SingleOrDefault(jv => jv.Id == id);
 
         public void Add(JobVacancy jobVacancy)
         {

@@ -12,8 +12,8 @@ namespace DevJobs.API.Controllers
     {
         private readonly DevJobsContext _context;
 
-        public JobApplicationsController(DevJobsContext context) =>
-            _context = context;
+        public JobApplicationsController(DevJobsContext context)
+            => _context = context;
 
         // POST: api/job-vacancies/{id}/applications
         /// <summary>
