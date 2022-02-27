@@ -51,13 +51,13 @@ builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
         .Enrich.FromLogContext()
 
         // PARA LOG NO SQL Server
-        //.WriteTo.MSSqlServer(
-        //    connectionString,
-        //    sinkOptions: new MSSqlServerSinkOptions()
-        //    {
-        //        AutoCreateSqlTable = true,
-        //        TableName = "Logs"
-        //    })
+        // .WriteTo.MSSqlServer(
+        //     connectionString,
+        //     sinkOptions: new MSSqlServerSinkOptions()
+        //     {
+        //         AutoCreateSqlTable = true,
+        //         TableName = "Logs"
+        //     })
 
         // PARA LOG NO CONSOLE
         .WriteTo.Console()
