@@ -22,7 +22,7 @@ Foi desenvolvida uma API REST completa de gerenciamento de vagas de emprego e ap
 
 ###
 
-![alt text](https://raw.githubusercontent.com/samuel-oldra/DevJobs.API/master/README_IMGS/swagger_ui.png)
+![alt text](https://raw.githubusercontent.com/samuel-oldra/DevJobs.API/main/README_IMGS/swagger_ui.png)
 
 ## Comandos básicos
 ```
@@ -44,6 +44,7 @@ dotnet user-secrets list
 ## Tool Entity Framework Core (migrations)
 ```
 dotnet tool install --global dotnet-ef
+dotnet tool uninstall --global dotnet-ef
 ```
 
 ## Migrations
