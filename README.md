@@ -44,7 +44,7 @@ dotnet publish
 ### Comandos user-secrets
 ```
 dotnet user-secrets init
-dotnet user-secrets set "ConnectionStrings:DevJobsCs" "Server=localhost;Database=DevJobs;User ID=sa;Password=senha;"
+dotnet user-secrets set "ConnectionStrings:DevJobsCs" "Server=***;Database=***;User ID=***;Password=***;"
 dotnet user-secrets list
 ```
 
