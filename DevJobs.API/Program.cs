@@ -16,6 +16,10 @@ builder.Services.AddDbContext<DevJobsContext>(options => options.UseInMemoryData
 // var connectionString = builder.Configuration.GetConnectionString("DevJobsCs");
 // builder.Services.AddDbContext<DevJobsContext>(o => o.UseSqlServer(connectionString));
 
+// PARA ACESSO AO SQLite
+// var connectionString = builder.Configuration.GetConnectionString("DevJobsCs");
+// builder.Services.AddDbContext<DevJobsContext>(o => o.UseSqlite(connectionString));
+
 // Injeção de Dependência
 // Tipos: Transient, Scoped, Singleton
 // Padrão Repository
@@ -58,6 +62,9 @@ builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
         //         AutoCreateSqlTable = true,
         //         TableName = "Logs"
         //     })
+
+        // PARA LOG NO SQLite
+        // .WriteTo.SQLite(Environment.CurrentDirectory + @"\Data\dados.db")
 
         // PARA LOG NO CONSOLE
         .WriteTo.Console()

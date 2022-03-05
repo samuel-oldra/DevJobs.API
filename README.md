@@ -12,7 +12,7 @@ Foi desenvolvida uma API REST completa de gerenciamento de vagas de emprego e ap
 ## Tecnologias e práticas utilizadas
 - ASP.NET Core com .NET 6
 - Entity Framework Core
-- SQL Server / In-Memory database
+- In-Memory database
 - Swagger
 - Injeção de Dependência
 - Programação Orientada a Objetos
