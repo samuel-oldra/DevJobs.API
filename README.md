@@ -13,11 +13,11 @@ Foi desenvolvida uma API REST completa de gerenciamento de vagas de emprego e ap
 - ASP.NET Core com .NET 6
 - Entity Framework Core
 - In-Memory database
-- Swagger
-- Injeção de Dependência
+- Swagger (documentação)
+- Serilog (log)
 - Programação Orientada a Objetos
+- Injeção de Dependência
 - Padrão Repository
-- Logs com Serilog
 - Clean Code
 - Publicação
 
@@ -35,9 +35,11 @@ Foi desenvolvida uma API REST completa de gerenciamento de vagas de emprego e ap
 ```
 dotnet new gitignore
 dotnet new webapi -o DevJobs.API
+
 dotnet build
 dotnet run
 dotnet watch run
+
 dotnet publish
 ```
 
