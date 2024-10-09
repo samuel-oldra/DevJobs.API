@@ -12,6 +12,10 @@ namespace DevJobs.API.Controllers
     {
         private readonly IJobVacancyRepository _repository;
 
+        /// <summary>
+        /// Construtor
+        /// </summary>
+        /// <param name="repository"></param>
         public JobVacanciesController(IJobVacancyRepository repository)
             => _repository = repository;
 

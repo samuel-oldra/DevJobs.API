@@ -12,6 +12,10 @@ namespace DevJobs.API.Controllers
     {
         private readonly DevJobsContext _context;
 
+        /// <summary>
+        /// Construtor
+        /// </summary>
+        /// <param name="context"></param>
         public JobApplicationsController(DevJobsContext context)
             => _context = context;
 
